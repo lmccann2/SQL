@@ -1,0 +1,21 @@
+/*Levi McCann
+/*Assignment 3
+
+/*Q1: Return the following columns from the Product and
+/*ProductReview tables: Name, ProductNumber, Color, ListPrice, ReviewerName, ReviewDate, Rating, Comments.
+/*Order this data by rating descending.
+
+USE[AdventureWorks2017];
+GO
+
+SELECT Name
+      ,ProductNumber
+      ,Color
+      ,ListPrice
+      ,ReviewerName
+      ,Rating
+      ,Comments
+	 FROM Production.Product INNER JOIN [Production].[ProductReview]
+	 ON Production.Product.ProductID = Production.ProductReview.ProductID
+	 ORDER BY Rating DESC;
+	 GO
