@@ -1,0 +1,27 @@
+/* Levi McCann
+/* Assignment3 question 2
+/*SQL
+
+/*Q2: Return the following columns from the Employee, Person and Email Address tables:
+/*Title, FirstName, MiddleName, LastName, Suffix, Job Title, EmailAddress.
+/*Order this data by LastName and then FirstName ascending.
+/*OR THIS ONE RUNS WITH NULLS USE THIS ONE
+-- I Like this one better
+USE [AdventureWorks2017];
+Go
+
+SELECT PT.Title
+	,PT.FirstName
+	,PT.LastName
+	,PT.Suffix
+	,P.JobTitle
+	,PE.EmailAddress
+
+FROM[HumanResources].[Employee] as P
+INNER JOIN  [Person].[Person] as PT
+ON P.BusinessEntityID = PT.BusinessEntityID
+
+INNER JOIN [Person].[EmailAddress] as PE ON P.[BusinessEntityID] = PE.[BusinessEntityID]
+
+ORDER By LastName, FirstName ASC;
+GO
