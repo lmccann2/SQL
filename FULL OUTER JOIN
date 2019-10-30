@@ -1,0 +1,20 @@
+/*Levi McCann
+/*Assigment 3 Question 4
+/* SQL
+
+/*Q:Return the following columns from the Product and SalesOrderDetail tables: Name, Count, Total.
+/*Name is the name of the product sold. The Count is the total count of records in a group.
+/*The Total is the total Sum of the LineTotal column. You will need to use a group by to group the sales
+/*line total by the product. Order this data by Total descending. This data is going to show you how much
+/*money was made off of each product.
+
+USE AdventureWorks2017;
+GO
+
+SELECT Name, Count(*) as 'Total Record in Group', Sum(LineTotal) as 'Total'
+FROM[Production].[Product] as Name
+FULL OUTER JOIN [Sales].[SalesOrderDetail] as Total
+ON Name.ProductID = Total.ProductID
+GROUP BY  Name
+Order BY Total DESC;
+GO
