@@ -1,0 +1,20 @@
+/*Levi McCann
+/*Assignment 3 Question 3
+/*Left Outer Join
+/*SQL
+
+/*Q3: Return the following columns from the Product and ProductInventory tables: Name, ListPrice, Quantity.
+/*Be sure to use the table join type that will get all products from the Product table and the matching
+/*records from the ProductInventory tables.
+/*In other words, get all the product names and all quantities even if they are NULL. Order this database by Name ascending
+
+
+USE AdventureWorks2017;
+GO
+
+SELECT  Name, ListPrice, Quantity
+
+FROM Production.Product
+LEFT OUTER JOIN Production.ProductInventory
+ON Production.Product.ProductID = Production.ProductInventory.ProductID;
+GO
