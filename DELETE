@@ -1,0 +1,19 @@
+--SQL
+--Levi McCann
+--11/11/2019
+--CIS23
+Assignment4Q3
+
+USE AdventureWorks2017;
+GO
+
+--Delete Record from Person.Person Table
+DELETE FROM Person.Person
+WHERE BusinessEntityID = 21778
+GO
+
+
+--Delet From Person.BusinessEntity
+DELETE FROM Person.BusinessEntity
+WHERE BusinessEntityID = 21778
+GO
