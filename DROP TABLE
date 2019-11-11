@@ -1,0 +1,13 @@
+--SQL
+--Levi McCann
+--11/11/2019
+--CIS23
+--Assignment4Q5
+--DROP TABLE
+
+
+USE AdventureWorks2017;
+GO
+
+DROP TABLE [Person].[PersonCallList];
+GO
