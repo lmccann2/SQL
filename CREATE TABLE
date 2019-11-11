@@ -1,0 +1,15 @@
+--SQL
+--Levi McCann
+--CIS23
+--11/11/2019
+--Assignment4Q4
+--CREATE TABLE
+
+
+USE AdventureWorks2017;
+GO
+
+CREATE TABLE Person.PersonCallList(BusinessEntityID int not null primary key,
+				DoNotCall bit null, LastCalled datetime null)
+
+--Creates Table in AventureWorks2017 database can see after refreshed
