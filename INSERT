@@ -1,0 +1,21 @@
+--SQL
+--Levi McCann
+--11/11/2019
+--CIS23
+--ASSIGNMENT4
+
+USE [AdventureWorks2017]
+
+GO
+
+--To See the Layout of the Table use the SELECT Below before inserting
+--SELECT * FROM Person.Person
+
+INSERT INTO Person.Person
+ VALUES (21778, 'IN', 0, NULL,
+         'Levi', 'Jon', 'McCann',
+	  NULL, 2, ' ', NULL,  NEWID(), GETDATE())
+
+--To See the Record that was inserted Look for BusinessEntityID = 21778
+SELECT * FROM Person.Person
+GO
