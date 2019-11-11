@@ -1,0 +1,26 @@
+--SQL
+--Levi McCann
+--CIS23
+--11/11/2019
+--Assignment4Q2
+
+USE AdventureWorks2017;
+GO
+--Update Title of record
+UPDATE Person.Person
+SET Title ='Dr'
+WHERE BusinessEntityID = 21778
+GO
+--Update ID of Record
+UPDATE Person.Person
+SET [rowguid] = NEWID()
+WHERE BusinessEntityID = 21778
+GO
+--Update Date to Current Date and Time
+UPDATE Person.Person
+SET[ModifiedDate] = GETDATE()
+WHERE BusinessEntityID = 21778
+
+GO
+SELECT * FROM Person.Person
+GO
